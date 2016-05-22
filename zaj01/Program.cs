@@ -144,8 +144,7 @@ namespace zaj01
             H.Distance = 3;
             I.Distance = 2;
             DFSMEthod Wynik =new DFSMEthod();
-           // Wynik.Search(A, "F");
-            Wynik.Search(B, "F");
+            Wynik.Search(A, "F");
 
         }
     }
