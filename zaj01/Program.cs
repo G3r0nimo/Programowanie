@@ -93,12 +93,12 @@ namespace zaj01
                // x.Childrens == Last.Name;
                 foreach (var y in x.Childrens)
                 {
-                    if (y.Name == Last.Name)
-                    {
-                        distance += x.Distance;
-                        Last == x;
+                    //if (y.Name == Last.Name)
+                    //{
+                    //    distance += x.Distance;
+                    //    Last == x;
                         
-                    }
+                    //}
                     
                     
                 }
@@ -144,7 +144,8 @@ namespace zaj01
             H.Distance = 3;
             I.Distance = 2;
             DFSMEthod Wynik =new DFSMEthod();
-            Wynik.Search(A, "F");
+           // Wynik.Search(A, "F");
+            Wynik.Search(B, "F");
 
         }
     }
