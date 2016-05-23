@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace zaj2
 {
     public class Chromosome
@@ -39,24 +40,27 @@ namespace zaj2
             }
             return wynik;
         }
-        public class Individual
+
+    }
+    public class Individual
+    {
+        public double Fitness { get; set; }
+        public Chromosome Chromosome { get; set; }
+        public Individual(int chromosomeLenght, Random random)
         {
-            public double Fitness { get; set; }
-            public Chromosome Chromosome { get; set; }
-            public Individual(int chromosomeLenght, Random random)
-            {
-                Chromosome = new Chromosome(chromosomeLenght, random);
-            }
+            Chromosome = new Chromosome(chromosomeLenght, random);
         }
     }
-    class Population
+   
+    public class Population
     {
+        Random rand = new Random();
         public List<Individual> Individual { get; set; }
         private Func<double, double> _fitnessFunction;
         public Population(int numberOfIndividuals, int chromosomeLenght, Func<double,double> fitnessFunction)
         {
-            Individuals = Enumerable.Range(0, numberOfIndividuals)
-                .Select(x => new Individual(chromosomeLenght, Random))
+            Individual = Enumerable.Range(0, numberOfIndividuals)
+                .Select(x => new Individual(chromosomeLenght, rand))
                 .ToList();
         }
 
