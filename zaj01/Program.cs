@@ -65,7 +65,7 @@ namespace zaj01
             return result;
         }
     }
-    //nowa implementacja sortowanie do liścia
+    //nowa implementacja sortowanie do liściaxx
 
     class DFSMEthod : SearchMethod
     {
